@@ -1,0 +1,212 @@
+/* -------------------------------------------------------------- */
+/* 전체 재사용 */
+
+/* 큰로고 */
+.logo {
+  @apply w-72 mx-auto 
+}
+
+.celebrate {
+  @apply w-56 mb-4
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* 버튼 모음 */
+/* 이전으로 버튼- 중앙 */
+.go-back-button {
+  word-break: keep-all;
+  @apply my-8 p-2 bg-zz-s rounded-md font-spoq text-white
+}
+
+/* 다음으로 버튼-오른쪽 */
+.go-next-button {
+  @apply mt-4 ml-4 p-2 px-12 bg-zz-p rounded-md font-spoq text-white mb-2
+}
+
+/* 메일 다시보내기 버튼 */
+.send-again-button {
+  @apply bg-zz-light-p text-white rounded-full font-spoq text-xs mt-2 py-1 px-3 mx-3 dark:bg-zz-dark-p
+}
+
+/* 제출버튼 */
+/*비활성화된 로그인 */
+.submit-button {
+  @apply bg-zz-p font-spoq text-white rounded-md mt-8 w-2/3 p-1 
+}
+
+
+
+
+/* -------------------------------------------------------------- */
+/* 에러페이지 재사용 모음 */
+/* 텍스트 중앙정렬하고싶을때 바깥 컨테이너 */
+.text-center-container {
+  @apply grid justify-items-center
+}
+
+/* 텍스트 여러개 한줄정렬하고 싶을때 바깥 컨테이너 */
+.text-oneline {
+  @apply flex
+}
+
+/* 에러페이지 제목 컨테이너 */
+/* 이 안에 제목이랑 얼굴 들어감 */
+.error-title-container {
+  @apply absolute
+}
+
+/* 에러페이지 제목 404,500, oops */
+.error-title {
+  @apply mt-16 text-9xl font-carter text-zz-s dark:text-zz-p
+}
+
+
+/* 에러페이지 중제목 */
+.error-sub-title {
+  word-break: keep-all;
+  @apply text-lg font-spoq font-bold dark:text-white
+}
+
+
+.error-content-bold {
+  word-break: keep-all;
+  @apply font-spoq font-bold text-sm dark:text-white
+}
+
+/* 에러페이지 내용 */
+.error-content {
+  word-break: keep-all;
+  @apply font-spoq text-xs my-1 dark:text-white
+}
+
+
+
+
+/* -------------------------------------------------------------- */
+/* 회원가입 관련 재사용 모음 */
+
+/* 중앙정렬하고싶을때 바깥 컨테이너 */
+.center-containers {
+  @apply flex justify-center
+}
+
+
+/* 화면 제목 */
+.account-title {
+  @apply font-carter text-3xl text-center  dark:text-white
+}
+
+/* 인풋창 제목 */
+.input-title {
+  @apply font-spoq text-sm text-zz-darkgray mt-3 mb-1 mx-1 dark:text-gray-50
+}
+
+/* 인풋창 */
+.account-input {
+  @apply bg-zz-light-input rounded-sm w-full text-zz-p h-10 px-8 text-sm dark:bg-zz-dark-input
+}
+
+.input-without-title {
+  @apply flex mt-4
+}
+
+/* 인풋창 안 왼쪽 아이콘 */
+.icon-aligned-left {
+  @apply absolute my-3 mx-2 text-zz-negative
+}
+
+/* 인풋창 안 오른쪽 아이콘 */
+.icon-aligned-right {
+  @apply absolute right-6 my-3 mx-2 text-zz-negative
+}
+
+/* 중복확인버튼-인풋창 안에 들어가는 버튼 */
+.button-in-input {
+  @apply absolute right-8 my-1.5 px-2 py-1 rounded-md bg-zz-s text-white text-sm
+}
+
+/* 남은시간 */
+.time-remain {
+  @apply mt-2 text-xs font-spoq font-bold
+}
+
+/* 코드입력 */
+.input-code {
+  @apply mt-6 bg-zz-light-input rounded-sm text-lg justify-items-center mx-2 h-12 w-12 dark:bg-zz-dark-input
+}
+
+/* 전송코드입력 text */
+.almost-done {
+  @apply mt-6 text-zz-s text-center
+}
+
+/* 메일 못받음? text */
+.didnt-get-mail {
+  @apply mt-6 text-zz-light-p text-center flex dark:text-zz-dark-p                                                                                     
+}
+
+.signup-error {
+  @apply text-zz-error text-sm
+}
+
+/* -------------------------------------------------------------- */
+/* 로그인, 회원가입으로 리다이렉트되는 작은 글씨 전체 */
+.redir-accounts {
+  word-break: keep-all;
+  @apply flex float-right text-zz-darkgray text-xs mt-4 mx-1 dark:text-zz-p;
+}
+
+.redir-accounts-click {
+  word-break: keep-all;
+  @apply mx-1 text-zz-p dark:text-white;
+}
+
+
+/* ------------------------------- */
+/* 회원정보 수정 관련 */
+
+.settings-button {
+  @apply flex-auto bg-zz-light-input rounded text-xl font-spoq my-1 py-2 px-16 h-16 text-left dark:bg-zz-dark-input
+}
+
+.settings-icon-aligned-left {
+  @apply absolute mx-5 my-5 h-8 text-zz-light-p dark:text-white
+}
+
+.settings-toggle-right {
+  @apply absolute right-6 mx-5 my-2 h-14 text-zz-light-p dark:text-white
+}
+
+.settings-right-letter-off {
+  top: 17.70rem;
+  right: 1.77rem;
+  @apply absolute mx-6 text-xs font-spoq text-zz-light-p font-bold dark:text-white
+}
+
+.settings-right-letter-on {
+  top: 17.70rem;
+  right:3.5rem;
+  @apply absolute mx-6 text-xs font-spoq text-white font-bold
+}
+
+/* --------------------------------------- */
+/* 해시태그 */
+
+.hashtag {
+  word-break: keep-all;
+  @apply bg-zz-s text-white font-spoq rounded-full px-4 mx-1 my-1
+}
+
+.hashtag-edit {
+  word-break: keep-all;
+  @apply absolute text-white border-2 border-zz-error rounded-full bg-zz-error
+}
+
+/* -------------------------------------------------- */
+/* 프로필 */
+.profile-title {
+  word-break: keep-all;
+  @apply text-zz-p font-bold font-spoq text-xl
+}

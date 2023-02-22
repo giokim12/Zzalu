@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@font-face {
+  font-family: "Carter-One";
+  src: url('../../public/CarterOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Black-Han-Sans";
+  src: url('../../public/BlackHanSans-Regular.ttf');
+}
+
+@import './account-error.css';

@@ -1,0 +1,76 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.8'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.samsamoo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// =========================== Spring ====================================
+	// OAuth
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	// jwt
+//	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	// jwt
+//	implementation 'com.auth0:java-jwt:3.19.2'
+	// jwt
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+	// Spring Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// Spring Web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	// 이메일 인증
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+	// freemarker
+	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// =========================== DB ====================================
+	//h2 DB
+	implementation 'com.h2database:h2'
+	// MySql
+	implementation 'mysql:mysql-connector-java:8.0.17'
+	// Redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	//JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// =========================== Server ====================================
+	// kafka
+	implementation 'org.springframework.kafka:spring-kafka'
+	//amzaon s3
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+	// =========================== LocalDateTime ====================================
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.1'
+
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j' // ?
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
